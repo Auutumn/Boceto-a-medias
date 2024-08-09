@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Diseñador Gráfico</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="neon">ZR</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="About/about.html">Acerca de mí</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <div class="container">
+            <div class="recent-projects">
+                <h2 class="neon">Más recientes</h2>
+            </div>
+
+            <br>
+
+            <div class="images-container">
+                <img src="https://i.pinimg.com/474x/1c/b7/f3/1cb7f32e7982f5531952c36da77847b8.jpg" alt="Proyecto 1">
+                <img src="https://i.pinimg.com/736x/c5/90/53/c5905307c90b8c319a1964a81f9e8b78.jpg" alt="Proyecto 2">
+                <img src="https://i.pinimg.com/736x/a5/d0/14/a5d01483860b7ea514dd80ed266518ff.jpg" alt="Proyecto 3">
+            </div>
+
+            <br><br>
+
+            <div class="separator-container">
+                <img src="https://cdn.pixabay.com/photo/2024/06/07/02/04/02-04-01-532__340.png" class="separator-icon" alt="Separador">
+                <img src="https://cdn.pixabay.com/photo/2024/06/07/02/04/02-04-01-532__340.png" class="separator-icon" alt="Separador">
+                <img src="https://cdn.pixabay.com/photo/2024/06/07/02/04/02-04-01-532__340.png" class="separator-icon" alt="Separador">
+                <img src="https://cdn.pixabay.com/photo/2024/06/07/02/04/02-04-01-532__340.png" class="separator-icon" alt="Separador">
+            </div>
+
+            <br><br>
+
+            <div class="filter-container">
+                <button id="filterButton" class="filter-button" onclick="filterBy()">Filtrar por: Ilustración</button>
+            </div>
+
+            <div class="row mt-5" style="display: none;">
+        
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/474x/d8/b0/af/d8b0afd41c0768573dc3dc879bf692a6.jpg" class="img-fluid rounded" alt="Proyecto 4">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/736x/0d/e0/0c/0de00c9393ad32ff1b23467993c7219c.jpg" class="img-fluid rounded" alt="Proyecto 5">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/736x/fd/a3/22/fda3229b763fd5f35ac59e4d8bf7571a.jpg" class="img-fluid rounded" alt="Proyecto 6">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/736x/9f/8f/5e/9f8f5e568fe556f5c4fee3da52899765.jpg" class="img-fluid rounded" alt="Proyecto 7">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/736x/2a/6f/80/2a6f8050973b1773ee726ea10506f140.jpg" class="img-fluid rounded" alt="Proyecto 8">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/736x/07/1a/48/071a4833ea2db7168ead35addec4e9b2.jpg" class="img-fluid rounded" alt="Proyecto 9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <p>Recuerda que me encuentro en</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><img src="https://cdn.pixabay.com/photo/2024/06/04/21/43/21-43-22-676__340.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="https://cdn.pixabay.com/photo/2024/06/04/21/49/21-49-07-994_640.png" alt="LinkedIn"></a>
+                <a href="https://www.behance.net" target="_blank"><img src="https://cdn.pixabay.com/photo/2024/06/04/21/52/21-52-51-64_640.png" alt="Behance"></a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p><img src="https://cdn.pixabay.com/photo/2024/06/04/21/56/21-56-19-351_640.png" alt="Pinterest"> ZrRjs</p>
+                        <p><img src="https://cdn.pixabay.com/photo/2024/06/04/21/59/21-59-27-418__340.png" alt="Gmail">zararojas@gmail.com</p>
+                    </div>
+                    <div class="footer-right">
+                        <p class="neon">ZR</p>
+                    </div>
+                </footer>
+
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script>
+                    function filterBy() {
+                        var button = document.getElementById("filterButton");
+                        var projects = document.querySelector(".projects .container .row");
+
+                        if (button.innerText === "Filtrar por: Ilustración") {
+                            
+                            button.innerText = "Filtrar por: Animación 3D";
+                            
+                            projects.style.display = "flex";
+                        } else {
+                            
+                            button.innerText = "Filtrar por: Ilustración";
+                            
+                            projects.style.display = "none";
+                        }
+                    }
+                </script>
+            </body>
+            </html>
+
